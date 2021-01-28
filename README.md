@@ -9,25 +9,25 @@ Alternatively, here's a description of the code:
 
 Distribution()
 
-- Attributes:
+Attributes:
 
 - mean
 - standard deviation
 - list of data
 
-- Methods:
+Methods:
 
 - read_data_file(file_name): given a file of numbers, reads in data to create list of numbers
 
 Binomial(Distribution)
 
-- Attributes:
+Attributes:
 
 - Distribution attributions
 - probability
 - size
 
-- Methods:
+Methods:
 
 - calculate_mean(): assigns and returns the mean
 - calculate_stdev(): assigns and returns the mean
@@ -40,11 +40,11 @@ Binomial(Distribution)
 
 Gaussian(Distribution)
 
-- Attributes:
+Attributes:
 
 - Distribution attributes
 
-- Methods:
+Methods:
 
 - calculate_mean(): assigns and returns the mean
 - calculate_stdev(): assigns and returns the mean
