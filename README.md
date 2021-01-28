@@ -11,49 +11,49 @@ Distribution()
 
 - Attributes:
 
--- mean
--- standard deviation
--- list of data
+- mean
+- standard deviation
+- list of data
 
 - Methods:
 
--- read_data_file(file_name): given a file of numbers, reads in data to create list of numbers
+- read_data_file(file_name): given a file of numbers, reads in data to create list of numbers
 
 Binomial(Distribution)
 
 - Attributes:
 
--- Distribution attributions
--- probability
--- size
+- Distribution attributions
+- probability
+- size
 
 - Methods:
 
--- calculate_mean(): assigns and returns the mean
--- calculate_stdev(): assigns and returns the mean
--- replace_stats_with_data(): assign prob, size, mean, stdev
--- plot_bar(): plot bar graph of data
--- pdf(k): Calculate the probability density
--- plot_bar_pdf(): Plot bar graph of the pdf
--- add(other): override +
--- repr(): override print()
+- calculate_mean(): assigns and returns the mean
+- calculate_stdev(): assigns and returns the mean
+- replace_stats_with_data(): assign prob, size, mean, stdev
+- plot_bar(): plot bar graph of data
+- pdf(k): Calculate the probability density
+- plot_bar_pdf(): Plot bar graph of the pdf
+- add(other): override +
+- repr(): override print()
 
 Gaussian(Distribution)
 
 - Attributes:
 
--- Distribution attributes
+- Distribution attributes
 
 - Methods:
 
--- calculate_mean(): assigns and returns the mean
--- calculate_stdev(): assigns and returns the mean
--- replace_stats_with_data(): assign prob, size, mean, stdev
--- plot_bar(): plot bar graph of data
--- pdf(k): Calculate the probability density
--- plot_bar_pdf(): Plot bar graph of the pdf
--- add(other): override +
--- repr(): override print()
+- calculate_mean(): assigns and returns the mean
+- calculate_stdev(): assigns and returns the mean
+- replace_stats_with_data(): assign prob, size, mean, stdev
+- plot_bar(): plot bar graph of data
+- pdf(k): Calculate the probability density
+- plot_bar_pdf(): Plot bar graph of the pdf
+- add(other): override +
+- repr(): override print()
 
 
 You can install this package from PyPI using the command 'pip install suchdistribution'.
