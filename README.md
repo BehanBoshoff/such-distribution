@@ -1,60 +1,46 @@
-#probability_distributions package
+# distributions package
 
-This is a package which does many wonderful things that normal people have no interest in whatsoever, such as adding Gaussian and Binomial Distributions together.
-If you count yourself amongst them, then all you need to know is:
+The package contains modules that can be used to create Binomial and Gaussian distribution objects and perform operations on them.
 
-'Python code big good.'
+# Files
 
-Alternatively, here's a description of the code:
+Binomialdistribution.py: Contains the Binomial class that can be used to create binomial distribution objects, given the number of trials and the probablity of an event occuring, or by reading in data from a data file.
 
-Distribution()
+Gaussiandistribution.py: Contains the Gaussian class that can be used to create gaussian distribution objects, which can be initialized providing the distribution's mean and standard deviation or reading in data from a file.
 
-Attributes:
+Generaldistribution.py: Contains the Distribution class, with common dsitribution attributes and methods. Inherited by both, Binomial and Gaussian classes.
 
-- mean
-- standard deviation
-- list of data
+# Installation
 
-Methods:
+pip install such-distribution
 
-- read_data_file(file_name): given a file of numbers, reads in data to create list of numbers
+# Usage Example
 
-Binomial(Distribution)
+>>> from distributions import *
+>>> Binomial(0.3, 10)
+mean 3.0, standard deviation 1.4491376746189437, p 0.3, n 10
+>>> Gaussian(10, 80)
+mean 10, standard deviation 80
+>>> bd1 = Binomial(0.4, 20)
+>>> bd2 = Binomial(0.4, 30)
+>>> bd1 + bd2
+mean 20.0, standard deviation 3.4641016151377544, p 0.4, n 50
+>>> gd1 = Gaussian(8, 20)
+>>> gd2 = Gaussian(7, 30)
+>>> gd1 + gd2
+mean 15, standard deviation 36.05551275463989
 
-Attributes:
+## Read line separated values from a file
 
-- Distribution attributions
-- probability
-- size
-
-Methods:
-
-- calculate_mean(): assigns and returns the mean
-- calculate_stdev(): assigns and returns the mean
-- replace_stats_with_data(): assign prob, size, mean, stdev
-- plot_bar(): plot bar graph of data
-- pdf(k): Calculate the probability density
-- plot_bar_pdf(): Plot bar graph of the pdf
-- add(other): override +
-- repr(): override print()
-
-Gaussian(Distribution)
-
-Attributes:
-
-- Distribution attributes
-
-Methods:
-
-- calculate_mean(): assigns and returns the mean
-- calculate_stdev(): assigns and returns the mean
-- replace_stats_with_data(): assign prob, size, mean, stdev
-- plot_bar(): plot bar graph of data
-- pdf(k): Calculate the probability density
-- plot_bar_pdf(): Plot bar graph of the pdf
-- add(other): override +
-- repr(): override print()
-
-
-You can install this package from PyPI using the command 'pip install such-distribution'.
-Enjoy!
+>>> gd1.read_data_file('/home/numbers.txt')
+>>> gd1.calculate_mean()
+78.0909090909091
+>>> gd1.calculate_stdev()
+92.87459776004906
+>>> bd1.read_data_file('/home/numbers_binomial.txt')
+>>> bd1.replace_stats_with_data()
+(0.6153846153846154, 13)
+>>> bd1.mean
+8.0
+>>> bd1.stdev
+1.7541160386140584
