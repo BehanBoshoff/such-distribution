@@ -56,5 +56,5 @@ Methods:
 - repr(): override print()
 
 
-You can install this package from PyPI using the command 'pip install suchdistribution'.
+You can install this package from PyPI using the command 'pip install such-distribution'.
 Enjoy!
